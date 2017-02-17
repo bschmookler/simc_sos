@@ -21,8 +21,8 @@ end parm experiment
 begin parm kinematics_main
   Ebeam = 3056.			;  (MeV)
   dEbeam = 0.05			;  beam energy variation (%)
-  electron_arm = 3              ;  1=hms,2=sos,3=hrsr,4=hrsl
-  hadron_arm = 4                ;  1=hms,2=sos,3=hrsr,4=hrsl
+  electron_arm = 1              ;  1=hms,2=sos,3=hrsr,4=hrsl
+  hadron_arm = 2                ;  1=hms,2=sos,3=hrsr,4=hrsl
   spec%e%P = 1300.0		;  e arm central momentum (MeV/c)
   spec%e%theta = 54.0		;  e arm angle setting (degrees)
   spec%p%P = 2520.0		;  p arm central momentum (MeV/c)

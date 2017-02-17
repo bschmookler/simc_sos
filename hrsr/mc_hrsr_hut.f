@@ -18,7 +18,7 @@ C----------------------------------------------------------------------
 
 	include 'struct_hrsr.inc'
 	include '../spectrometers.inc'
-	include 'g_dump_all_events.inc'
+	include '../g_dump_all_events.inc'
 
 C Math constants
 
