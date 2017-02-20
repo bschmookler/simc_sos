@@ -50,7 +50,8 @@ my_objs	=  $(OBJ1) $(OBJ2) $(OBJ3) $(OBJ4) $(OBJ5) $(OBJ6) $(OBJ7) $(OBJ8) $(OBJ
 my_deps = $(my_objs:.o=.d)
 
 MYOS := $(subst -,,$(shell uname))
-CERNLIBS = -lgeant$(GEANTVER) -lpawlib -lgraflib -lgrafX11 -lpacklib -lmathlib
+#CERNLIBS = -lgeant$(GEANTVER) -lpawlib -lgraflib -lgrafX11 -lpacklib -lmathlib
+CERNLIBS = -Wl,-static -lgeant$(GEANTVER) -lpawlib -lgraflib -lgrafX11 -lpacklib -lkernlib -lmathlib -Wl,-dy
 
 #For use with gfortran compiler
 # -fno-automatic - all program storage treated as static
@@ -61,7 +62,7 @@ ifeq ($(MYOS),Linux)
 # 32 bit, standard Fedora distributuion
 #  CERN_ROOT = /usr/lib/cernlib/2006
 # 64 bit, standard Fedora distributuion
-#  CERN_ROOT =  /usr/lib64/cernlib/2006 
+#  CERN_ROOT =  /usr/lib64/cernlib/2006
   FFLAGSA=-O -W -ffixed-line-length-132 -ff2c -fno-automatic -fdefault-real-8
   INCLUDES=-I.
   FFLAGS= $(INCLUDES) $(FFLAGSA)
