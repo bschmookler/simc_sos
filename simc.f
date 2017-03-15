@@ -513,7 +513,9 @@ c	call time (timestring2(11:23))
 	endif
 	if (electron_arm.eq.3 .or. hadron_arm.eq.3) then
 	  write(7,*) 'HRSr Trials:          ',rSTOP_trials
+	  write(7,*) 'Col. box entr         ',rSTOP_box_entr
 	  write(7,*) 'Slit hor/vert         ',rSTOP_slit_vert,rSTOP_slit_hor
+	  write(7,*) 'Col. box exit         ',rSTOP_box_exit
 	  write(7,*) 'Q1 entrance/mid/exit  ',rSTOP_Q1_in,rSTOP_Q1_mid,rSTOP_Q1_out
 	  write(7,*) 'Q2 entrance/mid/exit  ',rSTOP_Q2_in,rSTOP_Q2_mid,rSTOP_Q2_out
 	  write(7,*) 'Dipole entrance/exit  ',rSTOP_D1_in,rSTOP_D1_out
@@ -525,7 +527,9 @@ c	call time (timestring2(11:23))
 	endif
 	if (electron_arm.eq.4 .or. hadron_arm.eq.4) then
 	  write(7,*) 'HRSl Trials:          ',lSTOP_trials
+	  write(7,*) 'Col. box entr         ',lSTOP_box_entr
 	  write(7,*) 'Slit hor/vert         ',lSTOP_slit_vert,lSTOP_slit_hor
+	  write(7,*) 'Col. box exit         ',lSTOP_box_exit
 	  write(7,*) 'Q1 entrance/mid/exit  ',lSTOP_Q1_in,lSTOP_Q1_mid,lSTOP_Q1_out
 	  write(7,*) 'Q2 entrance/mid/exit  ',lSTOP_Q2_in,lSTOP_Q2_mid,lSTOP_Q2_out
 	  write(7,*) 'Dipole entrance/exit  ',lSTOP_D1_in,lSTOP_D1_out
